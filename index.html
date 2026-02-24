@@ -1,18 +1,30 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Hey, ain't that neet, a webpage</title>
+    <title>Fun Login Prompt</title>
 </head>
 <body>
+    <h2>Enter Credentials to Enter</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+        <button type="button" onclick="checkLogin()">Login</button>
+    </form>
 
-<h1>Look, a Heading</h1>
-<p>And even a paragraph.</p>
-<p>I made a third one lol.</p>
-<p>I can probobly just keep making these, I mean, who's gonna stop me?</p>
-<h2>Is that a second heading?</h2>
-<p>Is such a thing even possable?</p>
-<h1>Wait are the numbers a quantity thing or a size thing?</h1>
-<a href="https://www.youtube.com"> This might be a link </a>
+    <script>
+        function checkLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const correctUser = "thefrenchestfry";
+            const correctPass = "marquisdelafyeete";
 
+            if (user === correctUser && pass === correctPass) {
+                alert("Success! Redirecting...");
+                window.location.href = "secret.html"; 
+            } else {
+                alert("Access Denied! Incorrect username or password.");
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
